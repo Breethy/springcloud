@@ -9,6 +9,6 @@ spring:
   application:
     name: cloud-comsumer-order
 
-#feign:
-#  hystrix:
-#    enabled: true  #在feign中开启hystrix
+feign:
+  hystrix:
+    enabled: true  #在feign中开启hystrix
