@@ -1,0 +1,4 @@
+com\breethy\springcloud\controller\PaymentController.class
+com\breethy\springcloud\PaymentHystrixMain8001.class
+com\breethy\springcloud\service\impl\PaymentServiceImpl.class
+com\breethy\springcloud\service\PaymentService.class

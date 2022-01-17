@@ -20,12 +20,16 @@ public class OrderHystrixController {
     private OrderHystrixService orderHystrixService;
 
     @GetMapping("hystrix/ok")
+//    @HystrixCommand
     String paymentInfo_OK(@RequestParam("id") Integer id){
+//        int age = 10/0;
         return orderHystrixService.paymentInfo_OK(id);
     }
 
     @GetMapping("hystrix/timeout")
-    @HystrixCommand
+    @HystrixCommand(fallbackMethod = "paymentTimeOutFallbackMethod",commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "5000")
+    })
     String paymentInfo_TimeOut(@RequestParam("id") Integer id){
 //        int age = 10/0;
         return orderHystrixService.paymentInfo_TimeOut(id);
