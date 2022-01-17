@@ -20,9 +20,7 @@ public class OrderHystrixController {
     private OrderHystrixService orderHystrixService;
 
     @GetMapping("hystrix/ok")
-//    @HystrixCommand
     String paymentInfo_OK(@RequestParam("id") Integer id){
-//        int age = 10/0;
         return orderHystrixService.paymentInfo_OK(id);
     }
 
