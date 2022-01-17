@@ -30,4 +30,11 @@ public class PaymentController {
         log.info("************result: "+result);
         return result;
     }
+
+    @GetMapping("hystrix/circuitBreaker")
+    public String paymentCircuitBreaker(Integer id) throws Exception {
+        String result = paymentService.paymentCircuitBreaker(id);
+        log.info("************result: "+result);
+        return result;
+    }
 }
