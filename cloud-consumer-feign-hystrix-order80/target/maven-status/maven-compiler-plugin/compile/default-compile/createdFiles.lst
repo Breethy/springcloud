@@ -1,4 +1,0 @@
-com\breethy\springcloud\service\fallback\HystrixFallbackService.class
-com\breethy\springcloud\service\OrderHystrixService.class
-com\breethy\springcloud\controller\OrderHystrixController.class
-com\breethy\springcloud\OrderHystrixMain80.class
