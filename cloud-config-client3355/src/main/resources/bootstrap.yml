@@ -22,7 +22,7 @@ eureka:
     service-url:
       #设置与eureka server交互的地址查询服务和注册服务都需要依赖这个地址
       defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
-# 暴露监控端点 否则 curl -X POST "http://localhost:3355/actuator/refresh" 不可使用
+# 暴露监控端点 否则 curl -X POST "http://localhost:3355/actuator/refresh" 不可使用tx
 management:
   endpoints:
     web:
